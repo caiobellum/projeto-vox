@@ -1,14 +1,13 @@
 # Projeto PHP com Docker e PostgreSQL
 
-Este projeto demonstra a configuração de um ambiente PHP usando Docker e Docker Compose com PostgreSQL como banco de dados. O ambiente inclui um servidor web PHP e um banco de dados PostgreSQL, facilitando o desenvolvimento e o teste de aplicações PHP com um banco de dados relacional.
+Este projeto demonstra a configuração de um ambiente PHP usando Docker e Docker Compose com PostgreSQL como banco de dados. O ambiente inclui um servidor web PHP e um banco de dados PostgreSQL.
 
 ## Estrutura do Projeto
 
 - `docker-compose.yml` - Arquivo de configuração do Docker Compose.
-- `Dockerfile` - Arquivo de configuração para o contêiner PHP.
+- `.docker/Dockerfile` - Arquivo de configuração para o contêiner PHP.
 - `src/` - Diretório para arquivos de código PHP.
-- `init.sql` - Script SQL para inicializar o banco de dados PostgreSQL.
-- `README.md` - Este arquivo de documentação.
+- `DB/init.sql` - Script SQL para inicializar o banco de dados PostgreSQL.
 
 ## Pré-requisitos
 
@@ -22,5 +21,18 @@ Este projeto demonstra a configuração de um ambiente PHP usando Docker e Docke
    Clone este repositório para o seu ambiente local:
 
    ```bash
-   git clone https://github.com/seu_usuario/seu_projeto.git
-   cd seu_projeto
+   git clone https://github.com/caiobellum/projeto-vox
+   cd projeto-vox
+
+2. **Executar Projeto**
+   
+   Execute no terminal do projeto o comando abaixo:
+
+   ```bash
+   docker compose up
+
+3. **Acessando o Projeto**   
+
+   O acesso ao projeto deverá ocorrer no seguinte link:
+
+   http://localhost:80
