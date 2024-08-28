@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  php:
+    build: .docker
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - db
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    build: ./DB
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: teste21
+      POSTGRES_DB: vox
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./DB/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - db
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: teste21
+    ports:
+      - "8080:80"
+
+networks:
+  db:
+    driver: bridge
