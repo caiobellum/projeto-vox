@@ -10,7 +10,7 @@
     <div class="container success">
         <h1>Cadastro Concluído</h1>
         <p>Seu cadastro foi realizado com sucesso!</p>
-        <a href="/" class="button">Voltar para o Formulário</a>
+        <a href="/" class="button">Criar novo cadastro</a>
     </div>
 </body>
 </html>
