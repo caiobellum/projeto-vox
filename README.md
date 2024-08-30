@@ -36,3 +36,13 @@ Este projeto demonstra a configuração de um ambiente PHP usando Docker e Docke
    O acesso ao projeto deverá ocorrer no seguinte link:
 
    http://localhost:80
+
+   Ao abrir pgAdmin conecte-se ao Servidor vox, caso não haja um servidor configurado, clique com o botão direito em Servers e selecione Register > Server.
+   <br>
+   Preencha com os seguintes dados:<br>
+   Name: vox
+   <br>Host name/address: host.docker.internal
+   <br>Port: 5432.
+   <br>Maintenance database: vox
+   <br>Username: postgres.
+   <br>Password: teste21.
